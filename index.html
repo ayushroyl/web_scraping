@@ -1,0 +1,89 @@
+<html>
+<head>
+    <link rel="icon" url="img4.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Sky Computer Education-Result</title>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <img src="img4.png">
+                <a href="skycomputereducation.com">SKY COMPUTER EDUCATION</a>
+            </div>
+            <ul>
+                <li><a href="skycomputereducation.com">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="skycomputereducation.com/result">Result</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="background"></div>
+    <div class="center">
+        <h2>Sky Computer Education</h2><br>
+        <div id="tab" class="tab">
+        <table>
+            <dt>Microsoft Word Result</dt>
+            <tr>
+                <td>Date of Test</td>
+                <td>01/01/2022</td>
+            </tr>
+            <tr>
+                <td>Name :</td>
+                <td>Ayush Roy</td>
+            </tr>
+            <tr>
+                <td>Roll No. :</td>
+                <td>1640</td>
+            </tr>
+            <tr>
+                <td>Mobile No. :</td>
+                <td>7255071097</td>
+            </tr>
+            <tr>
+                <td>Answered :</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Incorrect Answer :</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Not Answered :</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Total marks :</td>
+                <td>50</td>
+            </tr>
+        </table>
+        </div>
+        <div class="btns">
+            <input type="button" value="Print" id="btPrint" onclick="createPDF()">
+            <a href="skycomputereducation.com/result">Back</a>
+        </div>
+    </div>
+</body>
+<script>
+    function createPDF() {
+        var sTable = document.getElementById('tab').innerHTML;
+        var style = "<style>";
+        style = style + "table {width: 100%;font: 17px Calibri;}";
+        style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "padding: 2px 3px;text-align: center;}";
+        style = style + "</style>";
+        var win = window.open('', '', 'height=600,width=600');
+        win.document.write('<html><head>');
+        win.document.write('<title>Result</title>');
+        win.document.write(style);
+        win.document.write('</head>');
+        win.document.write('<body>');
+        win.document.write(sTable);
+        win.document.write('</body></html>');
+        win.document.close();
+        win.print();
+    }
+</script>
+</html>
