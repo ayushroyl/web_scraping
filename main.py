@@ -80,7 +80,7 @@ def scrape_info(roll_number):
         driver.quit()
 
 # Initialize Telegram bot
-bot = telebot.TeleBot("7193802498:AAEQt9nFlR81Zc2TDyQgiN3Ob7FO9joYopQ")
+bot = telebot.TeleBot("BOT_TOKEN")
 
 # Command handler for the /start command
 @bot.message_handler(commands=['start'])
